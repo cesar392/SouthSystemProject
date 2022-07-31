@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0DFA84B599C2814B6E3184 /* Pods_SouthSystemProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B2D8D75E3837F49291BD6B /* Pods_SouthSystemProject.framework */; };
+		71294F6028972AC900F3FF4C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71294F5F28972AC900F3FF4C /* R.generated.swift */; };
+		71294F6228972B4200F3FF4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71294F6128972B4200F3FF4C /* Localizable.strings */; };
+		71294F6428972D4C00F3FF4C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71294F6328972D4C00F3FF4C /* Colors.swift */; };
 		71EA5B3C2897049B00483E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B3B2897049B00483E84 /* AppDelegate.swift */; };
 		71EA5B3E2897049B00483E84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B3D2897049B00483E84 /* SceneDelegate.swift */; };
 		71EA5B402897049B00483E84 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B3F2897049B00483E84 /* MainViewController.swift */; };
@@ -15,6 +19,9 @@
 		71EA5B532897049D00483E84 /* SouthSystemProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B522897049D00483E84 /* SouthSystemProjectTests.swift */; };
 		71EA5B5D2897049D00483E84 /* SouthSystemProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B5C2897049D00483E84 /* SouthSystemProjectUITests.swift */; };
 		71EA5B5F2897049D00483E84 /* SouthSystemProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B5E2897049D00483E84 /* SouthSystemProjectUITestsLaunchTests.swift */; };
+		71EA5B6C289718B000483E84 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B6B289718B000483E84 /* MainViewModel.swift */; };
+		71EA5B6F289719F800483E84 /* HasCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B6E289719F800483E84 /* HasCustomView.swift */; };
+		71EA5B7228971A4700483E84 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B7128971A4700483E84 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +42,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		71EA5B382897049B00483E84 /* SouthSystemProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SouthSystemProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A500053DE883E31E62F33B /* Pods-SouthSystemProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthSystemProject.debug.xcconfig"; path = "Target Support Files/Pods-SouthSystemProject/Pods-SouthSystemProject.debug.xcconfig"; sourceTree = "<group>"; };
+		55B2D8D75E3837F49291BD6B /* Pods_SouthSystemProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SouthSystemProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71294F55289722A500F3FF4C /* SouthSystemProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SouthSystemProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71294F56289722A500F3FF4C /* SouthSystemProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SouthSystemProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71294F57289722A500F3FF4C /* SouthSystemProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SouthSystemProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71294F5F28972AC900F3FF4C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		71294F6128972B4200F3FF4C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		71294F6328972D4C00F3FF4C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		71EA5B3B2897049B00483E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71EA5B3D2897049B00483E84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		71EA5B3F2897049B00483E84 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71EA5B442897049D00483E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71EA5B472897049D00483E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71EA5B492897049D00483E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71EA5B4E2897049D00483E84 /* SouthSystemProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SouthSystemProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EA5B522897049D00483E84 /* SouthSystemProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouthSystemProjectTests.swift; sourceTree = "<group>"; };
-		71EA5B582897049D00483E84 /* SouthSystemProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SouthSystemProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EA5B5C2897049D00483E84 /* SouthSystemProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouthSystemProjectUITests.swift; sourceTree = "<group>"; };
 		71EA5B5E2897049D00483E84 /* SouthSystemProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SouthSystemProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71EA5B6B289718B000483E84 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		71EA5B6E289719F800483E84 /* HasCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCustomView.swift; sourceTree = "<group>"; };
+		71EA5B7128971A4700483E84 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AD67B4FE1D5F018DAB421561 /* Pods-SouthSystemProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthSystemProject.release.xcconfig"; path = "Target Support Files/Pods-SouthSystemProject/Pods-SouthSystemProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0DFA84B599C2814B6E3184 /* Pods_SouthSystemProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,35 +91,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54F3D80F2E57EFC8A480EF3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55B2D8D75E3837F49291BD6B /* Pods_SouthSystemProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		71EA5B2F2897049B00483E84 = {
 			isa = PBXGroup;
 			children = (
 				71EA5B3A2897049B00483E84 /* SouthSystemProject */,
 				71EA5B512897049D00483E84 /* SouthSystemProjectTests */,
 				71EA5B5B2897049D00483E84 /* SouthSystemProjectUITests */,
-				71EA5B392897049B00483E84 /* Products */,
+				7D414D65EBDD14225BBC9248 /* Pods */,
+				54F3D80F2E57EFC8A480EF3C /* Frameworks */,
+				71294F55289722A500F3FF4C /* SouthSystemProject.app */,
+				71294F56289722A500F3FF4C /* SouthSystemProjectTests.xctest */,
+				71294F57289722A500F3FF4C /* SouthSystemProjectUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		71EA5B392897049B00483E84 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				71EA5B382897049B00483E84 /* SouthSystemProject.app */,
-				71EA5B4E2897049D00483E84 /* SouthSystemProjectTests.xctest */,
-				71EA5B582897049D00483E84 /* SouthSystemProjectUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		71EA5B3A2897049B00483E84 /* SouthSystemProject */ = {
 			isa = PBXGroup;
 			children = (
+				71294F6128972B4200F3FF4C /* Localizable.strings */,
+				71EA5B7028971A3500483E84 /* MVVM */,
+				71EA5B6D289719E400483E84 /* Utils */,
 				71EA5B3B2897049B00483E84 /* AppDelegate.swift */,
 				71EA5B3D2897049B00483E84 /* SceneDelegate.swift */,
-				71EA5B3F2897049B00483E84 /* MainViewController.swift */,
-				71EA5B442897049D00483E84 /* Assets.xcassets */,
 				71EA5B462897049D00483E84 /* LaunchScreen.storyboard */,
 				71EA5B492897049D00483E84 /* Info.plist */,
+				71EA5B442897049D00483E84 /* Assets.xcassets */,
 			);
 			path = SouthSystemProject;
 			sourceTree = "<group>";
@@ -124,6 +145,35 @@
 			path = SouthSystemProjectUITests;
 			sourceTree = "<group>";
 		};
+		71EA5B6D289719E400483E84 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				71294F5F28972AC900F3FF4C /* R.generated.swift */,
+				71EA5B6E289719F800483E84 /* HasCustomView.swift */,
+				71294F6328972D4C00F3FF4C /* Colors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		71EA5B7028971A3500483E84 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				71EA5B3F2897049B00483E84 /* MainViewController.swift */,
+				71EA5B6B289718B000483E84 /* MainViewModel.swift */,
+				71EA5B7128971A4700483E84 /* MainView.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		7D414D65EBDD14225BBC9248 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01A500053DE883E31E62F33B /* Pods-SouthSystemProject.debug.xcconfig */,
+				AD67B4FE1D5F018DAB421561 /* Pods-SouthSystemProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71EA5B622897049D00483E84 /* Build configuration list for PBXNativeTarget "SouthSystemProject" */;
 			buildPhases = (
+				307E84B515869206F5BE04D2 /* [CP] Check Pods Manifest.lock */,
+				71294F5A289726B400F3FF4C /* R.swift */,
 				71EA5B342897049B00483E84 /* Sources */,
 				71EA5B352897049B00483E84 /* Frameworks */,
 				71EA5B362897049B00483E84 /* Resources */,
+				A6158F2DC87F72512A4549AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,7 +194,7 @@
 			);
 			name = SouthSystemProject;
 			productName = SouthSystemProject;
-			productReference = 71EA5B382897049B00483E84 /* SouthSystemProject.app */;
+			productReference = 71294F55289722A500F3FF4C /* SouthSystemProject.app */;
 			productType = "com.apple.product-type.application";
 		};
 		71EA5B4D2897049D00483E84 /* SouthSystemProjectTests */ = {
@@ -159,7 +212,7 @@
 			);
 			name = SouthSystemProjectTests;
 			productName = SouthSystemProjectTests;
-			productReference = 71EA5B4E2897049D00483E84 /* SouthSystemProjectTests.xctest */;
+			productReference = 71294F56289722A500F3FF4C /* SouthSystemProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		71EA5B572897049D00483E84 /* SouthSystemProjectUITests */ = {
@@ -177,7 +230,7 @@
 			);
 			name = SouthSystemProjectUITests;
 			productName = SouthSystemProjectUITests;
-			productReference = 71EA5B582897049D00483E84 /* SouthSystemProjectUITests.xctest */;
+			productReference = 71294F57289722A500F3FF4C /* SouthSystemProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +265,7 @@
 				Base,
 			);
 			mainGroup = 71EA5B2F2897049B00483E84;
-			productRefGroup = 71EA5B392897049B00483E84 /* Products */;
+			productRefGroup = 71EA5B2F2897049B00483E84;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -230,6 +283,7 @@
 			files = (
 				71EA5B482897049D00483E84 /* LaunchScreen.storyboard in Resources */,
 				71EA5B452897049D00483E84 /* Assets.xcassets in Resources */,
+				71294F6228972B4200F3FF4C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,14 +303,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		307E84B515869206F5BE04D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SouthSystemProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71294F5A289726B400F3FF4C /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		A6158F2DC87F72512A4549AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SouthSystemProject/Pods-SouthSystemProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SouthSystemProject/Pods-SouthSystemProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SouthSystemProject/Pods-SouthSystemProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71EA5B342897049B00483E84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				71EA5B402897049B00483E84 /* MainViewController.swift in Sources */,
+				71294F6428972D4C00F3FF4C /* Colors.swift in Sources */,
+				71294F6028972AC900F3FF4C /* R.generated.swift in Sources */,
+				71EA5B7228971A4700483E84 /* MainView.swift in Sources */,
 				71EA5B3C2897049B00483E84 /* AppDelegate.swift in Sources */,
 				71EA5B3E2897049B00483E84 /* SceneDelegate.swift in Sources */,
+				71EA5B6F289719F800483E84 /* HasCustomView.swift in Sources */,
+				71EA5B6C289718B000483E84 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +544,7 @@
 		};
 		71EA5B632897049D00483E84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01A500053DE883E31E62F33B /* Pods-SouthSystemProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -432,6 +555,7 @@
 				INFOPLIST_FILE = SouthSystemProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,6 +573,7 @@
 		};
 		71EA5B642897049D00483E84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD67B4FE1D5F018DAB421561 /* Pods-SouthSystemProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +584,7 @@
 				INFOPLIST_FILE = SouthSystemProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
