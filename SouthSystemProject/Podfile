@@ -5,15 +5,10 @@ target 'SouthSystemProject' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SouthSystemProject
+  # UI pods
+  pod 'LBTATools', '~> 1'
 
-  target 'SouthSystemProjectTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'SouthSystemProjectUITests' do
-    # Pods for testing
-  end
+  #Files organizer
+  pod 'R.swift', '~> 6'
 
 end
