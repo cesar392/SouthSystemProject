@@ -6,32 +6,33 @@
 //
 
 import Foundation
+import AloeStackView
 import UIKit
 
 class EventDetailsView: UIView {
 
     // MARK: - Attributes
 
-    lazy var mainStack: UIStackView = {
-        let stack = UIStackView()
-        stack.alignment = .center
-        stack.spacing = 8
-        stack.axis = .vertical
-        stack.padTop(Constants.defaultPadding)
-        stack.padBottom(Constants.defaultPadding)
-        stack.padLeft(Constants.defaultPadding)
-        stack.padRight(Constants.defaultPadding)
+    lazy var mainStack: AloeStackView = {
+        let stack = AloeStackView()
+        stack.backgroundColor = .colorPrimary
+        stack.hidesSeparatorsByDefault = true
+        stack.isScrollEnabled = true
+        stack.rowInset = UIEdgeInsets(top: 8, left: Constants.defaultPadding,
+                                      bottom: 8, right: Constants.defaultPadding)
         return stack
     }()
 
     lazy var titleLabel: UILabel = {
         let lbl = UILabel()
+        lbl.textAlignment = .center
+        lbl.font = .systemFont(ofSize: 20)
         return lbl
     }()
 
     lazy var eventImage: UIImageView = {
         let image = UIImageView()
-        image.withSize(CGSize(width: 250, height: 150))
+        image.withHeight(250)
         image.sizeToFit()
         return image
     }()
@@ -39,17 +40,26 @@ class EventDetailsView: UIView {
     lazy var descriptionLabel: UILabel = {
         let lbl = UILabel()
         lbl.numberOfLines = 0
+        lbl.font = .systemFont(ofSize: 14)
         return lbl
     }()
 
     lazy var addressLabel: UILabel = {
         let lbl = UILabel()
         lbl.numberOfLines = 0
+        lbl.font = .systemFont(ofSize: 14)
+        return lbl
+    }()
+
+    lazy var priceValue: UILabel = {
+        let lbl = UILabel()
+        lbl.font = .systemFont(ofSize: 14)
         return lbl
     }()
 
     lazy var priceLabel: UILabel = {
         let lbl = UILabel()
+        lbl.font = .systemFont(ofSize: 14)
         return lbl
     }()
 
@@ -66,6 +76,7 @@ class EventDetailsView: UIView {
 
     private func setupView() {
         backgroundColor = .colorPrimary
+        setupMainStack()
         setupTitle()
         setupImage()
         setupDescription()
@@ -73,36 +84,28 @@ class EventDetailsView: UIView {
         setupPrice()
     }
 
+    private func setupMainStack() {
+        addSubview(mainStack)
+        mainStack.fillSuperview()
+    }
+
     private func setupTitle() {
-        addSubview(titleLabel)
-        titleLabel.anchor(.top(self.topAnchor, constant: Constants.defaultPadding))
+        mainStack.addRow(titleLabel)
     }
 
     private func setupImage() {
-        addSubview(eventImage)
-        eventImage.anchor(.top(titleLabel.bottomAnchor, constant: Constants.defaultPadding))
-        eventImage.centerYToSuperview()
+        mainStack.addRow(eventImage)
     }
 
     private func setupDescription() {
-        addSubview(descriptionLabel)
-        descriptionLabel.anchor(.top(eventImage.bottomAnchor, constant: Constants.defaultPadding),
-                                .trailing(self.trailingAnchor, constant: Constants.defaultPadding),
-                                .leading(self.leadingAnchor, constant: Constants.defaultPadding))
+        mainStack.addRow(descriptionLabel)
     }
 
     private func setupAddress() {
-        addSubview(addressLabel)
-        addressLabel.anchor(.top(descriptionLabel.bottomAnchor, constant: Constants.defaultPadding),
-                            .leading(self.leadingAnchor, constant: Constants.defaultPadding),
-                            .trailing(self.trailingAnchor, constant: Constants.defaultPadding))
+        mainStack.addRow(addressLabel)
     }
 
     private func setupPrice() {
-        addSubview(priceLabel)
-        priceLabel.anchor(.top(addressLabel.bottomAnchor, constant: Constants.defaultPadding),
-                          .leading(self.leadingAnchor, constant: Constants.defaultPadding),
-                          .trailing(self.trailingAnchor, constant: Constants.defaultPadding),
-                          .bottom(self.bottomAnchor, constant: 0))
+        mainStack.addRow(priceLabel)
     }
 }

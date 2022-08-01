@@ -186,10 +186,14 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 2 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
     struct localizable {
       /// Value: Detalhes do Evento
       static let event_details = Rswift.StringResource(key: "event_details", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Endereço: %@
+      static let address_label = Rswift.StringResource(key: "address_label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Preço do evento: R$%@
+      static let price_label = Rswift.StringResource(key: "price_label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: South System Project
       static let main_title = Rswift.StringResource(key: "main_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
@@ -204,6 +208,36 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("event_details", bundle: bundle, comment: "")
+      }
+
+      /// Value: Endereço: %@
+      static func address_label(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("address_label", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "address_label"
+        }
+
+        let format = NSLocalizedString("address_label", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
+      }
+
+      /// Value: Preço do evento: R$%@
+      static func price_label(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("price_label", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "price_label"
+        }
+
+        let format = NSLocalizedString("price_label", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
       }
 
       /// Value: South System Project

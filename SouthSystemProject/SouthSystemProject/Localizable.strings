@@ -8,3 +8,5 @@
 
 "main_title" = "South System Project";
 "event_details" = "Detalhes do Evento";
+"price_label" = "Preço do evento: R$%@";
+"address_label" = "Endereço: %@";

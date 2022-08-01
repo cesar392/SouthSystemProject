@@ -28,15 +28,29 @@ class EventDetailsViewController: UIViewController, HasCustomView {
 
     // MARK: - Actions
     private func setupView() {
-        
+        setNavigationButtons()
+    }
+
+    private func setNavigationButtons() {
+        let backItem = UIBarButtonItem(image: R.image.ic_back(),
+                                       style: .plain,
+                                       target: self,
+                                       action: #selector(backPressed))
+        backItem.tintColor = UIColor.white
+        self.navigationItem.leftBarButtonItem = backItem
+    }
+
+    @objc private func backPressed() {
+        self.navigationController?.popViewController(animated: true)
     }
 
     func updateView(with event: Event) {
+        self.title = R.string.localizable.event_details()
         getAddressFromLatLon(latitude: event.latitude, longitude: event.longitude)
         contentView.titleLabel.text = event.title
         contentView.eventImage.downloaded(from: event.image ?? "")
         contentView.descriptionLabel.text = event.description
-        contentView.priceLabel.text = String(event.price ?? 0)
+        contentView.priceLabel.text = R.string.localizable.price_label(String(event.price ?? 0))
     }
 
 
@@ -70,7 +84,7 @@ class EventDetailsViewController: UIViewController, HasCustomView {
                     addressString += locality + ", "
                 }
                 if let country = pm.country {
-                    addressString += country
+                    addressString += country + "."
                 }
             }
             self.updateAdress(with: addressString)
@@ -78,6 +92,6 @@ class EventDetailsViewController: UIViewController, HasCustomView {
     }
 
     private func updateAdress(with address: String) {
-        contentView.addressLabel.text = address
+        contentView.addressLabel.text = R.string.localizable.address_label(address)
     }
 }
