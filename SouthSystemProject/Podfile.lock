@@ -1,28 +1,40 @@
 PODS:
   - AloeStackView (1.2.0)
   - LBTATools (1.0.12)
+  - MarqueeLabel (4.0.5)
+  - NotificationBannerSwift (3.1.0):
+    - MarqueeLabel (~> 4.0.5)
+    - SnapKit (~> 5.0.1)
   - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - AloeStackView
   - LBTATools (~> 1)
+  - NotificationBannerSwift (~> 3)
   - R.swift (~> 6)
 
 SPEC REPOS:
   trunk:
     - AloeStackView
     - LBTATools
+    - MarqueeLabel
+    - NotificationBannerSwift
     - R.swift
     - R.swift.Library
+    - SnapKit
 
 SPEC CHECKSUMS:
   AloeStackView: 8a4ce0efa08128dd78d538372f60c76c224034bb
   LBTATools: 389a901a01b9a56bea5682c40cd6e23530f40015
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
+  NotificationBannerSwift: 49912a48b37e2f55d1cef4e8a38f15394f66a70a
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: e34bb0c1d41d981cf400d0f642b44c995c3724f8
+PODFILE CHECKSUM: 2d93bd1f3dff675023eac4785f31b672f8ff66a0
 
 COCOAPODS: 1.11.3

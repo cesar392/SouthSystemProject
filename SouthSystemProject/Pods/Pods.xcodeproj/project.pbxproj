@@ -16,6 +16,7 @@
 				63BD191520B155CCC1833C8427589F1B /* PBXTargetDependency */,
 			);
 			name = R.swift;
+			productName = R.swift;
 		};
 /* End PBXAggregateTarget section */
 
@@ -133,7 +134,7 @@
 		1002D2B89C5E160C654EB915EA70C584 /* R.swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.release.xcconfig; sourceTree = "<group>"; };
 		13450A0394A01BD4BCAA0480DBD48DA5 /* Pods-SouthSystemProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SouthSystemProject.debug.xcconfig"; sourceTree = "<group>"; };
 		13AACB7BE14A87B616838F10ED5FD1DC /* StringResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringResource.swift; path = Library/Core/StringResource.swift; sourceTree = "<group>"; };
-		1420CAAFDE8C9F6C0E7C3BD79A242A8B /* Pods-SouthSystemProject */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SouthSystemProject"; path = Pods_SouthSystemProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1420CAAFDE8C9F6C0E7C3BD79A242A8B /* Pods_SouthSystemProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SouthSystemProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		179CE1840B392333DD3C977361CB836D /* UIImage+ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageResource.swift"; path = "Library/UIKit/UIImage+ImageResource.swift"; sourceTree = "<group>"; };
 		1D4235E07CE16016F995F4EC1A272067 /* FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileResource.swift; path = Library/Core/FileResource.swift; sourceTree = "<group>"; };
 		1DCF8F287DEA6C5CAA5A07E6F770BAD5 /* StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardResource.swift; path = Library/Core/StoryboardResource.swift; sourceTree = "<group>"; };
@@ -179,7 +180,7 @@
 		9AED2619589296E57E80B69F1A35AD1D /* R.swift.Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.Library.release.xcconfig; sourceTree = "<group>"; };
 		9C263086CDC5ED48A761AB91C5D67639 /* Validatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Library/Core/Validatable.swift; sourceTree = "<group>"; };
 		9C99B85707FC406F9151329FEB6AD9A1 /* AloeStackView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AloeStackView-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E2D04526CAE736FA2F25311C4F715F3 /* SeparatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SeparatorView.swift; path = Sources/AloeStackView/Views/SeparatorView.swift; sourceTree = "<group>"; };
 		9E3CE236DE912B45FA629F82EC41D028 /* UIStoryboard+StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+StoryboardResource.swift"; path = "Library/UIKit/UIStoryboard+StoryboardResource.swift"; sourceTree = "<group>"; };
 		A456CA48979F87470244D9AA3B0E4EAC /* AloeStackView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AloeStackView; path = AloeStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,7 +333,6 @@
 				A9D2B242AC7C0AC361878A0D8427B5D6 /* UIView+Stacking.swift */,
 				AD6E8397BC8E286389F11597B7851589 /* Support Files */,
 			);
-			name = LBTATools;
 			path = LBTATools;
 			sourceTree = "<group>";
 		};
@@ -341,7 +341,6 @@
 			children = (
 				5B47CA6B77FBC5C0B93B92E6DBA530EF /* Support Files */,
 			);
-			name = R.swift;
 			path = R.swift;
 			sourceTree = "<group>";
 		};
@@ -403,7 +402,6 @@
 				9C263086CDC5ED48A761AB91C5D67639 /* Validatable.swift */,
 				0C70D6C85B82232A6C9180077CB74FD0 /* Support Files */,
 			);
-			name = R.swift.Library;
 			path = R.swift.Library;
 			sourceTree = "<group>";
 		};
@@ -412,7 +410,7 @@
 			children = (
 				A456CA48979F87470244D9AA3B0E4EAC /* AloeStackView */,
 				5ED70B1CD25BB08E24E44BA04CCF0774 /* LBTATools */,
-				1420CAAFDE8C9F6C0E7C3BD79A242A8B /* Pods-SouthSystemProject */,
+				1420CAAFDE8C9F6C0E7C3BD79A242A8B /* Pods_SouthSystemProject.framework */,
 				CA4E3B66CE4D02048C77392B64FD0ABB /* R.swift.Library */,
 			);
 			name = Products;
@@ -449,7 +447,6 @@
 				503A71F5F89B320F357CD557D5DD70A1 /* Tappable.swift */,
 				1215F2E9D1ECEFA3F951803A6AF3BE32 /* Support Files */,
 			);
-			name = AloeStackView;
 			path = AloeStackView;
 			sourceTree = "<group>";
 		};
@@ -545,7 +542,7 @@
 			);
 			name = "Pods-SouthSystemProject";
 			productName = Pods_SouthSystemProject;
-			productReference = 1420CAAFDE8C9F6C0E7C3BD79A242A8B /* Pods-SouthSystemProject */;
+			productReference = 1420CAAFDE8C9F6C0E7C3BD79A242A8B /* Pods_SouthSystemProject.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		99EAE32514CAA452AFA381A6172A1587 /* LBTATools */ = {

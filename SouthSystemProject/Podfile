@@ -7,6 +7,7 @@ target 'SouthSystemProject' do
 
   # UI pods
   pod 'LBTATools', '~> 1'
+  pod 'NotificationBannerSwift', '~> 3'
 
   #Files organizer
   pod 'R.swift', '~> 6'
