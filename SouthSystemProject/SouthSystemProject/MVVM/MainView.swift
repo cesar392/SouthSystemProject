@@ -30,7 +30,7 @@ class MainView: UIView {
     }
 
     private func setupView() {
-        self.backgroundColor = .white
+        self.backgroundColor = .colorPrimaryDark
         setupTable()
     }
 
@@ -44,6 +44,7 @@ class MainView: UIView {
         tableView.register(EventCell.self, forCellReuseIdentifier: EventCell.identifier)
         tableView.tableFooterView = UIView()
         tableView.sectionHeaderTopPadding = 0
+        tableView.backgroundColor = .colorPrimary
         addSubview(tableView)
         tableView.anchor(.top(safeAreaLayoutGuide.topAnchor, constant: 0),
                          .bottom(bottomAnchor, constant: 0),

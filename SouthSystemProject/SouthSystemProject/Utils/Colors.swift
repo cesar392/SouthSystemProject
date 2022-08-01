@@ -42,10 +42,9 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
 
-    static var colorPrimary: UIColor { return UIColor.color(hexString: "#0f2145") }
-    static let colorPrimaryDark = UIColor.color(hexString: "#00001f")
-    static let colorAccent = UIColor.color(hexString: "#00a9f4")
-    static let colorPrimaryLight = UIColor.color(hexString: "#3c4871")
+    static var colorPrimary: UIColor { return UIColor.color(hexString: "#D9A3AC") }
+    static var colorPrimaryDark: UIColor { return UIColor.color(hexString: "#CF8C95") }
+
 }
 
 extension String {
