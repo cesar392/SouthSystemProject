@@ -30,18 +30,16 @@ class MainViewModel: NSObject {
 
     // MARK: - Actions
     func fetchEventsFromAPI() {
-        let url = URL(string: Constants.eventsURL)
-        URLSession.shared.dataTask(with: url!) { data, response, error in
-            guard let data = data, error == nil else {
-                print("Something went wrong!")
-                return
+        let request = APIRequest(endpoint: Endpoints.events)
+        request.fetch(completion: { result in
+            switch result {
+            case .success(let events):
+                self.events = events
+                events.forEach({ print("The following event has been fetched: \($0.title)") })
+            case .failure(let error):
+                print("An error occured: \(error)")
             }
-            do {
-                self.events = try JSONDecoder().decode([Event].self, from: data)
-            } catch {
-                print("Failed to convert, an error occurred: \(error.localizedDescription)")
-            }
-        }.resume()
+        })
     }
 
     private func openDetails(from event: Event) {
@@ -66,7 +64,7 @@ extension MainViewModel: UITableViewDelegate, UITableViewDataSource {
 
     func updateCell(_ cell: EventCell, with event: Event) {
         cell.titleLabel.text = event.title
-        cell.eventImage.downloaded(from: event.image ?? "")
+        cell.eventImage.downloaded(from: event.image)
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

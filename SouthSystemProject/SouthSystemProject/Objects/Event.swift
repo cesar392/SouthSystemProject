@@ -8,12 +8,13 @@
 import Foundation
 
 struct Event: Codable {
-    let id: String?
-    let date: Int?
-    let description: String?
-    let image: String?
-    let longitude: Double?
-    let latitude: Double?
-    let price: Double?
-    let title: String?
+    var people: [People]
+    let id: String
+    let date: Int
+    let description: String
+    let image: String
+    let longitude: Double
+    let latitude: Double
+    let price: Double
+    let title: String
 }

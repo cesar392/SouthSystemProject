@@ -42,7 +42,9 @@ class MainViewController: UIViewController, HasCustomView {
     }
 
     func navigateToEventDetails(event: Event) {
-        let eventDetailViewController = EventDetailsViewController()
+        let eventDetailViewController = EventDetailsViewController.initiate(event: event)
+        let eventDetailViewModel = EventDetailsViewModel(viewController: eventDetailViewController)
+        eventDetailViewController.viewModel = eventDetailViewModel
         eventDetailViewController.updateView(with: event)
         self.navigationController?.pushViewController(eventDetailViewController, animated: true)
     }
