@@ -33,6 +33,7 @@ class EventDetailsView: UIView {
     lazy var eventImage: UIImageView = {
         let image = UIImageView()
         image.withHeight(250)
+        image.image = R.image.image_not_found()
         image.sizeToFit()
         return image
     }()

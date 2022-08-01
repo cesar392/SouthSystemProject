@@ -80,7 +80,9 @@ class EventDetailsViewController: UIViewController, HasCustomView {
             let emailField = fields[1]
             guard let email = emailField.text, !email.isEmpty,
                   let name = nameField.text, !name.isEmpty else {
-                      print("Invalid user")
+                      BannerPresenter.shared.showBanner(with: .warning,
+                                                        title: R.string.localizable.error(),
+                                                        message: R.string.localizable.bad_user())
                       return
                   }
             let people = People(eventId: event.id,

@@ -36,6 +36,7 @@ class EventCell: UITableViewCell {
     lazy var eventImage: UIImageView = {
         let image = UIImageView()
         image.withSize(CGSize(width: 250, height: 150))
+        image.image = R.image.image_not_found()
         image.sizeToFit()
         return image
     }()
