@@ -1,24 +1,28 @@
 PODS:
+  - AloeStackView (1.2.0)
   - LBTATools (1.0.12)
   - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
 
 DEPENDENCIES:
+  - AloeStackView
   - LBTATools (~> 1)
   - R.swift (~> 6)
 
 SPEC REPOS:
   trunk:
+    - AloeStackView
     - LBTATools
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
+  AloeStackView: 8a4ce0efa08128dd78d538372f60c76c224034bb
   LBTATools: 389a901a01b9a56bea5682c40cd6e23530f40015
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
 
-PODFILE CHECKSUM: 6cbf0a34d1e8e32abff016f676083df5c61490f3
+PODFILE CHECKSUM: e34bb0c1d41d981cf400d0f642b44c995c3724f8
 
 COCOAPODS: 1.11.3

@@ -130,10 +130,19 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
+    /// Image `ic_back`.
+    static let ic_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_back")
     /// Image `image_not_found`.
     static let image_not_found = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_not_found")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_back", bundle: ..., traitCollection: ...)`
+    static func ic_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_back, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "image_not_found", bundle: ..., traitCollection: ...)`
@@ -177,10 +186,25 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 2 localization keys.
     struct localizable {
+      /// Value: Detalhes do Evento
+      static let event_details = Rswift.StringResource(key: "event_details", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: South System Project
       static let main_title = Rswift.StringResource(key: "main_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Detalhes do Evento
+      static func event_details(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("event_details", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "event_details"
+        }
+
+        return NSLocalizedString("event_details", bundle: bundle, comment: "")
+      }
 
       /// Value: South System Project
       static func main_title(preferredLanguages: [String]? = nil) -> String {
