@@ -16,3 +16,8 @@
 "email" = "E-mail";
 "cancel" = "Cancelar";
 "confirm" = "Confirmar";
+"error" = "Erro!";
+"something_happened" = "Algo deu errado, tente novamente mais tarde.";
+"bad_user" = "Usuário inválido.";
+"success" = "Sucesso";
+"checkin_confirmed" = "Presença confirmada com sucesso!";

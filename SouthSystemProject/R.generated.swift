@@ -195,8 +195,10 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 10 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 15 localization keys.
     struct localizable {
+      /// Value: Algo deu errado, tente novamente mais tarde.
+      static let something_happened = Rswift.StringResource(key: "something_happened", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Cancelar
       static let cancel = Rswift.StringResource(key: "cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Check-in
@@ -209,14 +211,35 @@ struct R: Rswift.Validatable {
       static let email = Rswift.StringResource(key: "email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Endereço: %@
       static let address_label = Rswift.StringResource(key: "address_label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Erro!
+      static let error = Rswift.StringResource(key: "error", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Nome
       static let name = Rswift.StringResource(key: "name", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Presença confirmada com sucesso!
+      static let checkin_confirmed = Rswift.StringResource(key: "checkin_confirmed", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Preço do evento: R$%@
       static let price_label = Rswift.StringResource(key: "price_label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: South System Project
       static let main_title = Rswift.StringResource(key: "main_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Sucesso
+      static let success = Rswift.StringResource(key: "success", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Usuário inválido.
+      static let bad_user = Rswift.StringResource(key: "bad_user", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Você gostaria de fazer check-in no evento?
       static let check_in_message = Rswift.StringResource(key: "check_in_message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Algo deu errado, tente novamente mais tarde.
+      static func something_happened(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("something_happened", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "something_happened"
+        }
+
+        return NSLocalizedString("something_happened", bundle: bundle, comment: "")
+      }
 
       /// Value: Cancelar
       static func cancel(preferredLanguages: [String]? = nil) -> String {
@@ -298,6 +321,19 @@ struct R: Rswift.Validatable {
         return String(format: format, locale: locale, value1)
       }
 
+      /// Value: Erro!
+      static func error(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error"
+        }
+
+        return NSLocalizedString("error", bundle: bundle, comment: "")
+      }
+
       /// Value: Nome
       static func name(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -309,6 +345,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("name", bundle: bundle, comment: "")
+      }
+
+      /// Value: Presença confirmada com sucesso!
+      static func checkin_confirmed(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("checkin_confirmed", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "checkin_confirmed"
+        }
+
+        return NSLocalizedString("checkin_confirmed", bundle: bundle, comment: "")
       }
 
       /// Value: Preço do evento: R$%@
@@ -337,6 +386,32 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("main_title", bundle: bundle, comment: "")
+      }
+
+      /// Value: Sucesso
+      static func success(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("success", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "success"
+        }
+
+        return NSLocalizedString("success", bundle: bundle, comment: "")
+      }
+
+      /// Value: Usuário inválido.
+      static func bad_user(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("bad_user", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "bad_user"
+        }
+
+        return NSLocalizedString("bad_user", bundle: bundle, comment: "")
       }
 
       /// Value: Você gostaria de fazer check-in no evento?
