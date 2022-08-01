@@ -60,14 +60,3 @@ class CardView: UIView {
     }
 
 }
-
-extension UIView {
-
-    func anchorToEntireView(of view: UIView, padding: CGFloat = 0) {
-        translatesAutoresizingMaskIntoConstraints = false
-        topAnchor.constraint(equalTo: view.topAnchor, constant: padding).isActive = true
-        leftAnchor.constraint(equalTo: view.leftAnchor, constant: padding).isActive = true
-        bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -padding).isActive = true
-        rightAnchor.constraint(equalTo: view.rightAnchor, constant: -padding).isActive = true
-    }
-}
