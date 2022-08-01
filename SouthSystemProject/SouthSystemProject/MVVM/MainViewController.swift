@@ -27,7 +27,7 @@ class MainViewController: UIViewController, HasCustomView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = MainViewModel(view: self.view as! MainView)
+        self.viewModel = MainViewModel(viewController: self)
         setupHeader()
         viewModel?.fetchEventsFromAPI()
     }
@@ -35,5 +35,9 @@ class MainViewController: UIViewController, HasCustomView {
     // MARK: - Actions
     private func setupHeader() {
         self.title = R.string.localizable.main_title()
+    }
+
+    func reloadTableView() {
+        contentView.tableView.reloadData()
     }
 }

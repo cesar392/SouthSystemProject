@@ -30,7 +30,12 @@ extension UIImageView {
     }
 
     func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
+        guard let url = URL(string: link) else {
+            DispatchQueue.main.async { [weak self] in
+                self?.image = R.image.image_not_found()
+            }
+            return
+        }
         downloaded(from: url, contentMode: mode)
     }
 }

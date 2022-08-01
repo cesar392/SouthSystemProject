@@ -18,8 +18,8 @@ class EventCell: UITableViewCell {
         stack.alignment = .center
         stack.spacing = 8
         stack.axis = .vertical
-        stack.padTop(16)
-        stack.padBottom(16)
+        stack.padTop(Constants.defaultPadding)
+        stack.padBottom(Constants.defaultPadding)
         return stack
     }()
 

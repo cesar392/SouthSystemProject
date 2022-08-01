@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreLocation
 import UIKit
 
 class MainViewModel: NSObject {
@@ -15,21 +14,21 @@ class MainViewModel: NSObject {
     var events: [Event] = [] {
         didSet {
             DispatchQueue.main.async {
-                self.view?.tableView.reloadData()
+                self.viewController?.reloadTableView()
             }
         }
     }
 
-    private weak var view: MainView?
-    // MARK: - Life Cycle
+    private weak var viewController: MainViewController?
+    private var currentSelectedEvent: Event?
 
-    init(view: MainView) {
+    // MARK: - Life Cycle
+    init(viewController: MainViewController) {
         super.init()
-        self.view = view
+        self.viewController = viewController
     }
 
     // MARK: - Actions
-
     func fetchEventsFromAPI() {
         let url = URL(string: Constants.eventsURL)
         URLSession.shared.dataTask(with: url!) { data, response, error in
@@ -43,6 +42,12 @@ class MainViewModel: NSObject {
                 print("Failed to convert, an error occurred: \(error.localizedDescription)")
             }
         }.resume()
+    }
+
+    private func openDetails(from event: Event) {
+        let eventDetailViewController = EventDetailsViewController()
+        eventDetailViewController.updateView(with: event)
+        self.viewController?.navigationController?.pushViewController(eventDetailViewController, animated: true)
     }
     
 }
@@ -66,4 +71,9 @@ extension MainViewModel: UITableViewDelegate, UITableViewDataSource {
         cell.eventImage.downloaded(from: event.image ?? "")
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentSelectedEvent = self.events[indexPath.row]
+        guard let currentSelectedEvent = currentSelectedEvent else { return }
+        openDetails(from: currentSelectedEvent)
+    }
 }
