@@ -41,7 +41,7 @@ class MainView: UIView {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-//        tableView.register(SensitiveReportCell.self, forCellReuseIdentifier: SensitiveReportCell.identifier)
+        tableView.register(EventCell.self, forCellReuseIdentifier: EventCell.identifier)
         tableView.tableFooterView = UIView()
         tableView.sectionHeaderTopPadding = 0
         addSubview(tableView)

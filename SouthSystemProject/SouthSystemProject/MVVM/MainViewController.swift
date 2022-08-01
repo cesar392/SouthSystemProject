@@ -11,6 +11,7 @@ class MainViewController: UIViewController, HasCustomView {
 
     // MARK: - Attributes
     typealias ContentView = MainView
+
     private var viewModel: MainViewModel? {
         didSet {
             contentView.tableView.dataSource = viewModel
@@ -26,8 +27,9 @@ class MainViewController: UIViewController, HasCustomView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = MainViewModel()
+        self.viewModel = MainViewModel(view: self.view as! MainView)
         setupHeader()
+        viewModel?.fetchEventsFromAPI()
     }
 
     // MARK: - Actions
