@@ -130,12 +130,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
+    /// Image `ic_add`.
+    static let ic_add = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_add")
     /// Image `ic_back`.
     static let ic_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_back")
     /// Image `image_not_found`.
     static let image_not_found = Rswift.ImageResource(bundle: R.hostingBundle, name: "image_not_found")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_add", bundle: ..., traitCollection: ...)`
+    static func ic_add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_add, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ic_back", bundle: ..., traitCollection: ...)`
@@ -186,16 +195,67 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 10 localization keys.
     struct localizable {
+      /// Value: Cancelar
+      static let cancel = Rswift.StringResource(key: "cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Check-in
+      static let check_in_title = Rswift.StringResource(key: "check_in_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Confirmar
+      static let confirm = Rswift.StringResource(key: "confirm", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Detalhes do Evento
       static let event_details = Rswift.StringResource(key: "event_details", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: E-mail
+      static let email = Rswift.StringResource(key: "email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Endereço: %@
       static let address_label = Rswift.StringResource(key: "address_label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Nome
+      static let name = Rswift.StringResource(key: "name", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Preço do evento: R$%@
       static let price_label = Rswift.StringResource(key: "price_label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: South System Project
       static let main_title = Rswift.StringResource(key: "main_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Você gostaria de fazer check-in no evento?
+      static let check_in_message = Rswift.StringResource(key: "check_in_message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Cancelar
+      static func cancel(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("cancel", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "cancel"
+        }
+
+        return NSLocalizedString("cancel", bundle: bundle, comment: "")
+      }
+
+      /// Value: Check-in
+      static func check_in_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("check_in_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "check_in_title"
+        }
+
+        return NSLocalizedString("check_in_title", bundle: bundle, comment: "")
+      }
+
+      /// Value: Confirmar
+      static func confirm(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("confirm", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "confirm"
+        }
+
+        return NSLocalizedString("confirm", bundle: bundle, comment: "")
+      }
 
       /// Value: Detalhes do Evento
       static func event_details(preferredLanguages: [String]? = nil) -> String {
@@ -208,6 +268,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("event_details", bundle: bundle, comment: "")
+      }
+
+      /// Value: E-mail
+      static func email(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("email", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "email"
+        }
+
+        return NSLocalizedString("email", bundle: bundle, comment: "")
       }
 
       /// Value: Endereço: %@
@@ -223,6 +296,19 @@ struct R: Rswift.Validatable {
 
         let format = NSLocalizedString("address_label", bundle: bundle, comment: "")
         return String(format: format, locale: locale, value1)
+      }
+
+      /// Value: Nome
+      static func name(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("name", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "name"
+        }
+
+        return NSLocalizedString("name", bundle: bundle, comment: "")
       }
 
       /// Value: Preço do evento: R$%@
@@ -251,6 +337,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("main_title", bundle: bundle, comment: "")
+      }
+
+      /// Value: Você gostaria de fazer check-in no evento?
+      static func check_in_message(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("check_in_message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "check_in_message"
+        }
+
+        return NSLocalizedString("check_in_message", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

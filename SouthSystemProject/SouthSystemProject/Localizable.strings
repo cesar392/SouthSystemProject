@@ -10,3 +10,9 @@
 "event_details" = "Detalhes do Evento";
 "price_label" = "Preço do evento: R$%@";
 "address_label" = "Endereço: %@";
+"check_in_title" = "Check-in";
+"check_in_message" = "Você gostaria de fazer check-in no evento?";
+"name" = "Nome";
+"email" = "E-mail";
+"cancel" = "Cancelar";
+"confirm" = "Confirmar";

@@ -45,9 +45,7 @@ class MainViewModel: NSObject {
     }
 
     private func openDetails(from event: Event) {
-        let eventDetailViewController = EventDetailsViewController()
-        eventDetailViewController.updateView(with: event)
-        self.viewController?.navigationController?.pushViewController(eventDetailViewController, animated: true)
+        viewController?.navigateToEventDetails(event: event)
     }
     
 }

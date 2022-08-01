@@ -13,11 +13,12 @@
 		71294F6428972D4C00F3FF4C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71294F6328972D4C00F3FF4C /* Colors.swift */; };
 		718C56EF2898000A009B76AC /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C56EE2898000A009B76AC /* EventDetailsViewController.swift */; };
 		718C56F128980050009B76AC /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C56F028980050009B76AC /* EventDetailsView.swift */; };
+		718C56F52898689C009B76AC /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C56F42898689C009B76AC /* StringUtils.swift */; };
 		71B61A1E2897399200180451 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A1D2897399200180451 /* Event.swift */; };
 		71B61A2028973A8200180451 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A1F28973A8200180451 /* Constants.swift */; };
 		71B61A22289745B400180451 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A21289745B400180451 /* EventCell.swift */; };
 		71B61A24289745E700180451 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A23289745E700180451 /* CardView.swift */; };
-		71B61A262897623200180451 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A252897623200180451 /* ImageUtils.swift */; };
+		71B61A262897623200180451 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A252897623200180451 /* UIUtils.swift */; };
 		71EA5B3C2897049B00483E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B3B2897049B00483E84 /* AppDelegate.swift */; };
 		71EA5B3E2897049B00483E84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B3D2897049B00483E84 /* SceneDelegate.swift */; };
 		71EA5B402897049B00483E84 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA5B3F2897049B00483E84 /* MainViewController.swift */; };
@@ -59,11 +60,12 @@
 		71294F6328972D4C00F3FF4C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		718C56EE2898000A009B76AC /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		718C56F028980050009B76AC /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
+		718C56F42898689C009B76AC /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		71B61A1D2897399200180451 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		71B61A1F28973A8200180451 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		71B61A21289745B400180451 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		71B61A23289745E700180451 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		71B61A252897623200180451 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		71B61A252897623200180451 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		71EA5B3B2897049B00483E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71EA5B3D2897049B00483E84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		71EA5B3F2897049B00483E84 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -186,7 +188,8 @@
 				71294F6328972D4C00F3FF4C /* Colors.swift */,
 				71B61A1F28973A8200180451 /* Constants.swift */,
 				71B61A23289745E700180451 /* CardView.swift */,
-				71B61A252897623200180451 /* ImageUtils.swift */,
+				71B61A252897623200180451 /* UIUtils.swift */,
+				718C56F42898689C009B76AC /* StringUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -412,8 +415,9 @@
 				71B61A1E2897399200180451 /* Event.swift in Sources */,
 				71294F6428972D4C00F3FF4C /* Colors.swift in Sources */,
 				71294F6028972AC900F3FF4C /* R.generated.swift in Sources */,
+				718C56F52898689C009B76AC /* StringUtils.swift in Sources */,
 				71EA5B7228971A4700483E84 /* MainView.swift in Sources */,
-				71B61A262897623200180451 /* ImageUtils.swift in Sources */,
+				71B61A262897623200180451 /* UIUtils.swift in Sources */,
 				71B61A2028973A8200180451 /* Constants.swift in Sources */,
 				71B61A22289745B400180451 /* EventCell.swift in Sources */,
 				718C56EF2898000A009B76AC /* EventDetailsViewController.swift in Sources */,

@@ -40,4 +40,10 @@ class MainViewController: UIViewController, HasCustomView {
     func reloadTableView() {
         contentView.tableView.reloadData()
     }
+
+    func navigateToEventDetails(event: Event) {
+        let eventDetailViewController = EventDetailsViewController()
+        eventDetailViewController.updateView(with: event)
+        self.navigationController?.pushViewController(eventDetailViewController, animated: true)
+    }
 }
