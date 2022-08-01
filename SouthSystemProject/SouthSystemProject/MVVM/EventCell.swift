@@ -13,14 +13,31 @@ class EventCell: UITableViewCell {
     // MARK: - Attributes
     static var identifier = "EventCell"
 
+    lazy var mainStack: UIStackView = {
+        let stack = UIStackView()
+        stack.alignment = .center
+        stack.spacing = 8
+        stack.axis = .vertical
+        stack.padTop(16)
+        stack.padBottom(16)
+        return stack
+    }()
+
     lazy var cardView: CardView = {
         let view = CardView(showShadow: true)
         return view
     }()
 
-    lazy var label: UILabel = {
+    lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         return lbl
+    }()
+
+    lazy var eventImage: UIImageView = {
+        let image = UIImageView()
+        image.withSize(CGSize(width: 250, height: 150))
+        image.sizeToFit()
+        return image
     }()
 
 
@@ -37,15 +54,26 @@ class EventCell: UITableViewCell {
 
     // MARK: - Actions
     func setupCell() {
-        cardView.addSubview(label)
-        label.anchor(.top(cardView.topAnchor, constant: 16),
-                     .trailing(cardView.trailingAnchor, constant: 8),
-                     .bottom(cardView.bottomAnchor, constant: 16),
-                     .leading(cardView.leadingAnchor, constant: 8))
-        label.centerYToSuperview()
-        label.textAlignment = .center
+        setupTitleLabel()
+        setupImageView()
+        setupCardView()
+        self.backgroundColor = .colorPrimary
+        self.selectedBackgroundView = UIView()
+    }
 
+    private func setupTitleLabel() {
+        mainStack.addArrangedSubview(titleLabel)
+        titleLabel.textAlignment = .center
+    }
+
+    func setupImageView() {
+        mainStack.addArrangedSubview(eventImage)
+    }
+
+    private func setupCardView() {
+        cardView.addSubview(mainStack)
+        mainStack.fillSuperview()
         contentView.addSubview(cardView)
-        cardView.fillSuperview(padding: UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8))
+        cardView.fillSuperview(padding: UIEdgeInsets(top: 8, left: 8, bottom: 4, right: 8))
     }
 }

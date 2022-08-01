@@ -62,7 +62,8 @@ extension MainViewModel: UITableViewDelegate, UITableViewDataSource {
     }
 
     func updateCell(_ cell: EventCell, with event: Event) {
-        cell.label.text = event.title
+        cell.titleLabel.text = event.title
+        cell.eventImage.downloaded(from: event.image ?? "")
     }
 
 }
